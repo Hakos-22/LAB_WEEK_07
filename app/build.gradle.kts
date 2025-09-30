@@ -39,6 +39,7 @@ android {
     }
 }
 
+
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -46,10 +47,16 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.play.services.maps)
+    implementation(libs.play.services.location)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.fragment.ktx)
-    implementation(libs.play.services.location)
+}
+
+secrets {
+    propertiesFileName = "secrets.properties"
+
+    defaultPropertiesFileName = "local.defaults.properties"
 }
